@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: .05rem;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Styling the Side bar  */
+
+.my-sidebar {
+    width: 25%;
+}
+
+.my-sidebar p {
+    font-size: 2rem;
+}
+
+.my-sidebar .my-list-group {
+   padding:0;
+   margin:0;
+   display:flex;
+   flex-direction: column;
+    border-radius: .30rem;
+}
+
+.my-sidebar .my-list-group .list-item {
+    border: .5px solid #F6E7C1;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    display: block;
+}
+/* Main Section styling  */
+.main-section {
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin:0 10px;
+}
+.main-section .main-container{
+    width:100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+/* Image Box styling  */
+.main-section .main-container .imagebox{
+    width:100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-section .main-container .imagebox .image{
+    width: 100%;
+     /* Full height */
+     height: 100%;
+    max-width: 100%;
+    border-radius: .3rem;
+    background-image: url("https://images.pexels.com/photos/732057/pexels-photo-732057.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-section .main-container .name{
+
+    padding:.75rem .25rem;
+    font-size:1.2rem;
+    font-weight:700;
+    display: inline-block;
+}
+
+.city{
+    float: left;
+    color:#00004A;
+}
+.rent{
+    float: right;
+    color:#00004A;
+}
+.main-section .main-container .description{
+    padding:.75rem .25rem;
+}
+/* Rating icon & Review styling  */
+.fa-star{
+    color:#FF3C38;
+}
+#countReview{
+    float: right;
+    color:#FF3C38;
+    font-weight: 700;
+}
+@media screen and (max-width:800px){
+
+    .my-sidebar{
+        width:50%;
+        margin-bottom: 30px;
+    }
+    
+}
+
+
+
+/*Comment Sections */
+.comment-section{
+    border-radius: .4rem;
+    background-color: rgba(211,211,211,.2);
+    padding:.8rem;
+    margin: 1.5rem 0
+}
+
+/*.comment-display{*/
+    
+   
+/*    padding:.8rem;*/
+/*}*/
+.comment-time{
+    float:right;
+}
+.comment-text{
+    margin-top:.8rem;
+}

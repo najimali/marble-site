@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YelpCamp</title>
+    <!--Connecting to bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--Connecting to font awesome -->
+    <script src="https://kit.fontawesome.com/20cfcf78fe.js" crossorigin="anonymous"></script>
+    <!--Connecting to Font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!--Connecting Style Sheet -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+    <div class="nav-container">
+        <a class="logo" href="/">Makrana Marble</a>
+
+        <ul class="nav-ul">
+            <% if(!currentUser) { %>
+            <li class="nav-li"><a class="nav-bar-a" href="/login">Login</a></li>
+            <li class="nav-li"><a class="nav-bar-a" href="/register">Sign up</a></li>
+
+            <% } else {%>
+
+            <li class="nav-li"><a class="nav-bar-a">Signed in as <%=currentUser.username%></a></li>
+            <li class="nav-li"><a class="nav-bar-a" href="/logout">Logout</a></li>
+
+            <%}%>
+            
+        </ul>
+
+        <a class="menu__button" onclick="openNav()" href="#">
+             <i class="fa fa-bars" aria-hidden="true"></i>
+            
+        </a>
+        
+    </div>
+    <div class="overlay" id="mobile__menu">
+        <a class="close" onclick="closeNav()" href="#">&times;</a>
+        <div class="overlay__content">
+           <% if(!currentUser) { %>
+
+            <a class="nav-bar-a" href="/login">Login</a>
+            <a class="nav-bar-a" href="/register">Sign up</a>
+            <% } else {%>
+            <a class="nav-bar-a">Signed in as <%=currentUser.username%></a>
+            <a class="nav-bar-a" href="/logout">Logout</a>
+            <%}%>
+           
+        </div>
+    </div>  
+           

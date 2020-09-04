@@ -1,0 +1,80 @@
+<%-include("../partials/header");-%>
+<!--dot dot (..) means go one level back & then search for partials-->
+<div class="container">
+    <header class ="jumbotron">
+        <div class="container">
+            <h1>Welcome to the Makrana Marble!!</h1>
+            <p>View our hand-picked marble collections from all over the world </p>
+            <p>
+                <a class ="btn btn-primary btn-large" href="/campgrounds/new">Add new Campground</a>
+            </p>
+        
+        </div>
+    </header>
+    
+
+
+
+    <div class="flex-container" style="
+                                display:flex;
+                                justify-content: center;
+                                align-items:center;
+                                flex-wrap: wrap;
+                                padding:20px 20px;
+                                
+                                ">
+        
+        <% campgroundsVar.forEach(function(camp){ %>
+    
+        <!--<div class="col md-3 col-sm-6" >-->
+       
+            <div class="card" style="
+                                    max-width:300px;
+                                    
+                                    margin: 30px 10px;
+                                    padding: 20px 15px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items:center;
+                                    justify-content:center;
+                                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+                                    transition: 0.3s ease-in-out;
+                                    border-radius: 10px;
+                                    ">
+                
+                <div class="imageBox" style="
+                                            width:  250px;
+                                            height: 200px;
+                                            display:flex;
+                                            justify-content: center;
+                                            align-items:center;
+                                            border-radius: 10px;">
+                      <img style ="
+                                   max-width: 100%;
+                                   max-height:100%;
+                                   border-radius: 10px;"
+                      src="<%= camp.image %>">
+                </div>
+                <div class="my-content" style="
+                    padding:10px 10px;
+                    color: #303242;
+                    transition: 0.3s ease-in-out;
+                    ">
+                     <h4><%= camp.name%></h4>
+                </div> 
+                 <p>
+                     
+                <!--camp._id is link for a particular post -->
+                <a class ="btn btn-primary" href="/campgrounds/<%=camp._id%>">More Info</a>
+            </p>
+
+            </div>    
+       
+            
+
+        <!--</div>-->
+   
+        <% }); %>
+    </div>
+</div>
+<%-include("../partials/footer")-%>

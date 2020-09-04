@@ -1,0 +1,71 @@
+<%- include("../partials/header");-%>
+<link rel="stylesheet" href="../../stylesheets/show.css">
+<div class="wrapper">
+
+        <div class="my-sidebar">
+            <p>Marble Site</p>
+            <ul class="my-list-group">
+                <li class="list-item">Info 1</li>
+                <li class="list-item">Info 2</li>
+                <li class="list-item">Info 3</li>
+            </ul>
+        </div>
+        <div class="main-section">
+            <div class="main-container">
+                <div class="imagebox">
+                   <img class = "image"src="<%= campgroundVar.image %>">
+                </div>
+                <div class="name">
+                    <h4 class="city"><a><%=campgroundVar.name%></a></h4>
+                    <h4 class="rent">$9.00/night</h4>
+                </div>
+                <p class="description">
+                    <%=campgroundVar.description%>
+                </p>
+                <h4 class="city">
+                    Submitted by <%=campgroundVar.author.username%>
+                </a></h4>
+
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <p id="countReview">5 Review</p>
+                </div>
+               
+            </div>
+            <!-- Comment Section  -->
+            <div class="comment-section">
+                <div class="text-right">
+                     <a class ="btn btn-success"href="/campgrounds/<%=campgroundVar._id%>/comments/new">Add Comment</a>
+                </div>
+                <hr>
+                <%campgroundVar.comments.forEach(function(comment){%>
+               
+                    <div class="comment-display">
+                    <div class="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <strong><%=comment.author.username%></strong>
+                        <span class="comment-time">10 Days</span>
+                    </div>
+                        
+                        <p class="comment-text">
+                            <%=comment.text%>
+                        </p>
+                    </div>
+               
+
+                <%});%>
+            
+        </div>
+        
+</div>
+
+
+<%- include("../partials/footer");-%>
