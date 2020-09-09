@@ -4,7 +4,7 @@ Package.json contains all the meta data about a particular app or package
 such as description ,name ,author,dependecy , versions, contributer ,github repo url ,home page
 etc.
 
-Dependecy -contains all the package a particular app relies on.
+Dependency -contains all the package a particular app relies on.
 
 1.npm init - create a new package.json for our app where we can save packages
 2.--save - will save the package name in the our package.json
@@ -105,7 +105,8 @@ in the input tag name will store the data which is passing
 for eg name ="newFriend"  then input of input is contain in the newFriend & can be used further.
 
 
-# To extract the passing parameters from the body we need body parser in the request method
+# extracting the passing parameters 
+To extract the passing parameters from the body we need body parser in the request method
 let passingData = request.body.name_variable_from_the_input_tag
 
 finally redirect the page to which you want using
@@ -181,7 +182,7 @@ NEW         /campground/:id/comments/new    GET
 CREATE      /campground/:id/comments        POST
 # Lesson - Intro to REST
 
-RESt - representational state transfer
+REST - representational state transfer
  - it is mapping between routes and CRUD
 
 CRUD - 
