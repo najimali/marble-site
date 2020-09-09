@@ -64,7 +64,7 @@ equal sign (=) expect the value & simple <%%> is for logic
 
 
 
-#Lesson - Servig Custom Assets
+# Lesson - Serving Custom Assets
 
 
 some minor changes 
