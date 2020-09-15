@@ -112,13 +112,12 @@ let passingData = request.body.name_variable_from_the_input_tag
 finally redirect the page to which you want using
 response.redirect("page_url");
 
-
-# Steps to install mongodb - https://www.youtube.com/watch?v=rtZZvti8beU
+# Steps to install mongodb - [Video](https://www.youtube.com/watch?v=rtZZvti8beU)
 github - https://github.com/nax3t/aws-cloud9-instructions
 
 
 # Some mongo commands
-# officials doc - https://docs.mongodb.com/manual/reference/command/
+# officials doc - [link](https://docs.mongodb.com/manual/reference/command/)
 1.mongod - to run mongo databases in the background
     ./mongod - dot means start with the current we are in & / means look for mongod
     you have installed mongo in ec2-user directory so to run mongo server
